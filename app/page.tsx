@@ -1,5 +1,6 @@
+import NavBarMenu from "@/components/navbarMenu";
+import ProductsList from "@/components/productsList";
 import SideMenu from "@/components/sideMenu";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -17,11 +18,15 @@ export default function Home() {
     //   </div>
     // </main>
     <main className="grid grid-cols-12 grid-rows-12 h-screen">
-      <div className="col-span-12 row-span-1 bg-gray-200">Header</div>
-      <div className="col-span-2 row-span-11 bg-gray-200">
+      <div className="col-span-12 row-span-1 bg-gray-800">
+        <NavBarMenu />
+      </div>
+      <div className="col-span-2 row-span-11 bg-gray-800">
         <SideMenu />
       </div>
-      <div className="col-span-10 row-span-11 bg-white">Content</div>
+      <div className="col-span-10 row-span-11 bg-gray-400">
+        <ProductsList />
+      </div>
     </main>
   );
 }
