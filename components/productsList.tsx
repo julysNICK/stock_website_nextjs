@@ -4,8 +4,26 @@ import React from "react";
 
 function ProductsList() {
   return (
-    <div className="flex flex-row justify-center items-center h-full">
+    <div
+      className="flex flex-row justify-center items-center h-full"
+      style={{
+        backgroundColor: "#424242",
+      }}
+    >
       <ul className="flex flex-col w-full px-4">
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
         <CardComponent />
         <CardComponent />
         <CardComponent />

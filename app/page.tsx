@@ -1,8 +1,35 @@
+"use client";
 import NavBarMenu from "@/components/navbarMenu";
 import ProductsList from "@/components/productsList";
+import Profile from "@/components/profile";
 import SideMenu from "@/components/sideMenu";
-
+import SuppliersList from "@/components/supplier";
+import { CgProfile } from "react-icons/cg";
+import React from "react";
 export default function Home() {
+  const [index, setIndex] = React.useState(0);
+
+  var componets = [
+    {
+      index: 0,
+      name: "Profile",
+      icon: <CgProfile />,
+      component: <Profile />,
+    },
+    {
+      index: 1,
+      name: "Products",
+      icon: <CgProfile />,
+      component: <ProductsList />,
+    },
+    {
+      index: 2,
+      name: "Suppliers",
+      icon: <CgProfile />,
+      component: <SuppliersList />,
+    },
+  ];
+
   return (
     // <main className="flex min-h-screen flex-col items-center justify-between p-24">
     //   <SideMenu />
@@ -21,11 +48,21 @@ export default function Home() {
       <div className="col-span-12 row-span-1 bg-gray-800">
         <NavBarMenu />
       </div>
-      <div className="col-span-2 row-span-11 bg-gray-800">
-        <SideMenu />
+      <div
+        className="col-span-2 row-span-11"
+        style={{
+          backgroundColor: "#212121",
+        }}
+      >
+        <SideMenu
+          componets={componets}
+          setIndex={(index: number) => {
+            setIndex(index);
+          }}
+        />
       </div>
-      <div className="col-span-10 row-span-11 bg-gray-400">
-        <ProductsList />
+      <div className="col-span-10 row-span-11 h-full">
+        {componets[index].component}
       </div>
     </main>
   );
