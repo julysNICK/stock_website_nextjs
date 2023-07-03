@@ -1,20 +1,25 @@
+"use client";
 import Image from "next/image";
 import { CgProfile } from "react-icons/cg";
 import Profile from "./profile";
 import ProductsList from "./productsList";
 import SuppliersList from "./supplier";
+import React from "react";
 
 function SideMenu({
   componets,
   setIndex,
+  selected,
 }: {
   componets: {
     index: number;
     name: string;
     icon: JSX.Element;
     component: JSX.Element;
+    selected: boolean;
   }[];
   setIndex: any;
+  selected: number;
 }) {
   return (
     <div
@@ -27,23 +32,26 @@ function SideMenu({
         <li className="my-px">
           <a
             href="#"
-            className="flex flex-row items-center h-12 px-4 rounded-lg text-gray-600 my-14"
+            className="flex flex-row items-center px-4 rounded-lg my-6"
+            style={{
+              color: " #333333",
+            }}
           >
             <Image
-              src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c21hcnRwaG9uZXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80"
+              src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
               alt="Picture of the author"
-              width={100}
+              width={70}
               height={10}
               style={{
                 borderRadius: "100%",
-                objectFit: "cover",
+                objectFit: "contain",
               }}
             />
 
             <span
               className="ml-3"
               style={{
-                color: " #FFFFFF",
+                color: "#333333",
               }}
             >
               Name: Store test
@@ -87,7 +95,7 @@ function SideMenu({
           </a>
         </li> */}
 
-        {componets.map((component) => {
+        {componets.map((component, index) => {
           return (
             <li
               className="my-px"
@@ -98,7 +106,12 @@ function SideMenu({
             >
               <a
                 href="#"
-                className="flex flex-row items-center h-12 px-4 rounded-lg text-white hover:bg-gray-100  hover:text-blue-700"
+                className="flex flex-row items-center h-12 px-4 rounded-lg hover:bg-gray-100  hover:text-blue-700"
+                style={{
+                  backgroundColor:
+                    component.index === selected ? "#1E40AF" : "",
+                  color: component.index === selected ? "#FFFFFF" : "#333333",
+                }}
               >
                 <span className="flex items-center justify-center text-lg text-gray-400">
                   {component.icon}

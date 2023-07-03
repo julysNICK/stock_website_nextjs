@@ -7,7 +7,7 @@ function SuppliersList() {
     <div
       className="flex flex-row justify-center items-center min-h-screen"
       style={{
-        backgroundColor: "#424242",
+        backgroundColor: "#F2F2F2",
       }}
     >
       <ul className="flex flex-col w-full px-4">

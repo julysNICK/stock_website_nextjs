@@ -4,7 +4,7 @@ function NavBarMenu() {
       className="flex flex-row justify-center items-center"
       style={{
         height: "100px",
-        backgroundColor: "#1a202c",
+        backgroundColor: "#8E8C88",
       }}
     >
       <div className="flex flex-row items-center">

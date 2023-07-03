@@ -5,7 +5,7 @@ function Profile() {
     <div
       className="flex flex-col items-center justify-start min-h-screen"
       style={{
-        backgroundColor: "#424242",
+        backgroundColor: "#F2F2F2",
       }}
     >
       <div className="flex justify-start">

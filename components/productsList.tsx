@@ -7,7 +7,7 @@ function ProductsList() {
     <div
       className="flex flex-row justify-center items-center h-full"
       style={{
-        backgroundColor: "#424242",
+        backgroundColor: "#F2F2F2",
       }}
     >
       <ul className="flex flex-col w-full px-4">
@@ -38,49 +38,113 @@ function CardComponent() {
   const [showPopupAdd, setShowPopupAdd] = React.useState(false);
 
   return (
-    <li className="my-px">
-      <div className="flex flex-col sm:flex-row sm:justify-between items-center p-4 bg-cyan-900 rounded-lg shadow">
+    <li className="my-4">
+      <div
+        className="flex flex-col sm:flex-row sm:justify-between items-center p-4  rounded-lg shadow"
+        style={{
+          backgroundColor: "#D3D3D3",
+        }}
+      >
         <Image
           src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c21hcnRwaG9uZXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80"
           alt="Picture of the author"
           width={50}
           height={50}
         />
-        <div className="flex flex-col items-center">
+        <div
+          className="flex flex-col items-center"
+          style={{
+            color: "#333333",
+          }}
+        >
           <h1>Name</h1>
-          <span className="text-sm font-light text-gray-500">Product 1</span>
+          <span
+            className="text-sm font-light"
+            style={{
+              color: "#555555 ",
+            }}
+          >
+            Product 1
+          </span>
         </div>
 
-        <div className="flex flex-col items-center">
+        <div
+          className="flex flex-col items-center"
+          style={{
+            color: "#333333",
+          }}
+        >
           <h1>Price</h1>
-          <span className="text-sm font-light text-gray-500">$200,0</span>
+          <span
+            className="text-sm font-light"
+            style={{
+              color: "#555555 ",
+            }}
+          >
+            $200,0
+          </span>
         </div>
 
-        <div className="flex flex-col items-center">
+        <div
+          className="flex flex-col items-center"
+          style={{
+            color: "#333333",
+          }}
+        >
           <h1>Supplier</h1>
-          <span className="text-sm font-light text-gray-500">Supplier 1</span>
+          <span
+            className="text-sm font-light"
+            style={{
+              color: "#555555 ",
+            }}
+          >
+            Supplier 1
+          </span>
         </div>
 
-        <div className="flex flex-col items-center">
+        <div
+          className="flex flex-col items-center"
+          style={{
+            color: "#333333",
+          }}
+        >
           <h1>Comprado</h1>
-          <span className="text-sm font-light text-gray-500">12/02/12</span>
+          <span
+            className="text-sm font-light text-gray-500"
+            style={{
+              color: "#555555 ",
+            }}
+          >
+            12/02/12
+          </span>
         </div>
 
         <div className="flex flex-row items-center">
           <button
-            className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+            className="hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+            style={{
+              backgroundColor: "#8E8C88",
+            }}
             onClick={() => {
               setShowPopupEdit(true);
             }}
           >
             Edit
           </button>
-          <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+          <button
+            className="hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+            style={{
+              backgroundColor: "#FF6347",
+            }}
+          >
             Delete
           </button>
 
           <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            className="hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            style={{
+              backgroundColor: "#61C0BF",
+            }}
             onClick={() => {
               setShowPopupAdd(true);
             }}

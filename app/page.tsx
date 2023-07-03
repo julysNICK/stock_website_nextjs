@@ -15,18 +15,21 @@ export default function Home() {
       name: "Profile",
       icon: <CgProfile />,
       component: <Profile />,
+      selected: true,
     },
     {
       index: 1,
       name: "Products",
       icon: <CgProfile />,
       component: <ProductsList />,
+      selected: false,
     },
     {
       index: 2,
       name: "Suppliers",
       icon: <CgProfile />,
       component: <SuppliersList />,
+      selected: false,
     },
   ];
 
@@ -51,7 +54,7 @@ export default function Home() {
       <div
         className="col-span-2 row-span-11"
         style={{
-          backgroundColor: "#212121",
+          backgroundColor: "#C4B7A6",
         }}
       >
         <SideMenu
@@ -59,6 +62,7 @@ export default function Home() {
           setIndex={(index: number) => {
             setIndex(index);
           }}
+          selected={index}
         />
       </div>
       <div className="col-span-10 row-span-11 h-full">
