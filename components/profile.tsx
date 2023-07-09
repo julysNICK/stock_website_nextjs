@@ -16,9 +16,20 @@ function Profile() {
         />
       </div>
       <div className="text-center px-6 py-4">
-        <h2 className="text-xl font-bold text-gray-300">John Doe</h2>
+        <h2
+          className="text-xl font-bold "
+          style={{
+            color: "#333333",
+          }}
+        >
+          John Doe
+        </h2>
         <p className="text-gray-500">Web Developer</p>
-        <p className="text-white">
+        <p
+          style={{
+            color: "#555555 ",
+          }}
+        >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
       </div>

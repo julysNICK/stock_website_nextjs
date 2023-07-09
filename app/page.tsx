@@ -12,24 +12,24 @@ export default function Home() {
   var componets = [
     {
       index: 0,
-      name: "Profile",
-      icon: <CgProfile />,
-      component: <Profile />,
-      selected: true,
-    },
-    {
-      index: 1,
       name: "Products",
       icon: <CgProfile />,
       component: <ProductsList />,
       selected: false,
     },
     {
-      index: 2,
+      index: 1,
       name: "Suppliers",
       icon: <CgProfile />,
       component: <SuppliersList />,
       selected: false,
+    },
+    {
+      index: 2,
+      name: "Profile",
+      icon: <CgProfile />,
+      component: <Profile />,
+      selected: true,
     },
   ];
 

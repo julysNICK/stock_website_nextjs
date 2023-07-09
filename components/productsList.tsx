@@ -1,11 +1,12 @@
 "use client";
 import Image from "next/image";
 import React from "react";
+import Pager from "./pager";
 
 function ProductsList() {
   return (
     <div
-      className="flex flex-row justify-center items-center h-full"
+      className="flex flex-col justify-center items-center h-full pb-5"
       style={{
         backgroundColor: "#F2F2F2",
       }}
@@ -29,6 +30,7 @@ function ProductsList() {
         <CardComponent />
         <CardComponent />
       </ul>
+      <Pager />
     </div>
   );
 }
